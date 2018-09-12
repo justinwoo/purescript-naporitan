@@ -27,4 +27,4 @@ things = N.reflectRecordProxy ::
   }
 ```
 
-See <./tests/Main.purs>
+See [test/Main.purs](./test/Main.purs)
