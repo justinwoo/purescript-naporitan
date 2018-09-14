@@ -6,7 +6,7 @@ import Prim.Row as Row
 import Prim.RowList as RL
 import Record.Builder (Builder)
 import Record.Builder as Builder
-import Type.Prelude (class IsSymbol, Proxy(..), RLProxy(..), SProxy(..))
+import Type.Prelude (class IsSymbol, Proxy(..), RLProxy(..), SProxy(..), RProxy(..))
 
 class ReflectRecordProxy a where
   reflectRecordProxy :: a
@@ -47,4 +47,10 @@ instance reflectProxyProxy :: ReflectProxy (Proxy a) where
 
 instance reflectProxySProxy :: ReflectProxy (SProxy s) where
   reflectProxy = SProxy
+
+instance reflectProxyRProxy :: ReflectProxy (RProxy s) where
+  reflectProxy = RProxy
+
+instance reflectProxyRLProxy :: ReflectProxy (RLProxy s) where
+  reflectProxy = RLProxy
 
