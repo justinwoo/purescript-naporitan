@@ -19,7 +19,7 @@ instance reflectRecordProxyInst ::
     where
       builder = reflectRecordProxyBuilder (RLProxy :: RLProxy rl)
 
-class ReflectRecordProxyBuilder (rl :: RL.RowList) (i :: # Type) (o :: # Type)
+class ReflectRecordProxyBuilder (rl :: RL.RowList Type) (i :: Row Type) (o :: Row Type)
   | rl -> i o where
   reflectRecordProxyBuilder :: RLProxy rl -> Builder { | i } { | o }
 
